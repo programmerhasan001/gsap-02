@@ -95,6 +95,49 @@ nav {
             -moz-border-radius: 50px;
             -ms-border-radius: 50px;
             -o-border-radius: 50px;
-}
+        }
     }
+
+
+    & .img1,
+    .img4 {
+        & img {
+            width: 150px;
+            position: absolute;
+            top: 12%;
+            left: 10%;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+        }
+    }
+
+    & .img4 {
+        & img {
+            top: unset;
+            bottom: 15%;
+            left: 75%;
+        }
+    }
+}
+
+.scroll-down {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    margin-top: 110px;
+    text-align: center;
+
+    & span {
+        margin-inline: 10px;
+        border: 1px solid #fff;
+        padding: 5px 15px 10px;
+        margin-top: 10px;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+}
 }

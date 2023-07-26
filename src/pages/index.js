@@ -1,4 +1,43 @@
+import { gsap } from "gsap"
+import { useEffect } from "react"
+
 export default function Home() {
+  useEffect(() => {
+    const tl = gsap.timeline();
+
+    tl.from('nav .logo, .nav-items li, .login-part h4, .login-part button', {
+      y: -100,
+      duration: 1,
+      opacity: 0,
+      stagger: 0.2,
+      delay: 0.5
+    })
+
+    tl.from(".txt-content h1, .txt-content h2, .txt-content h3", {
+      y: 100,
+      opacity: 0,
+      stagger: 0.3
+    })
+
+    tl.from('.img1 img, .img4 img', {
+      scale: 0,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.3
+    })
+
+    tl.from('.scroll-down', {
+      opacity: 0,
+      scale: 0
+    })
+
+    tl.to('.scroll-down', {
+      y: 40,
+      repeat: -1,
+      yoyo: true,
+      duration: 1.5
+    })
+  }, [])
   return (
     <div>
       <div id="main">
@@ -24,6 +63,15 @@ export default function Home() {
           <h2>To <a href="#">Book Now</a> sell</h2>
           <h3>Anything</h3>
         </div>
+        <div className="img1">
+          <img src="https://images.unsplash.com/photo-1598495494482-172d89ff078c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=682&q=80" alt="" />
+        </div>
+        <div className="img4">
+          <img src="https://images.unsplash.com/photo-1579783928621-7a13d66a62d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=690&q=80" alt="" />
+        </div>
+        <h5 className="scroll-down">
+          scroll down <span>↓</span>
+        </h5>
       </div>
     </div>
   )
